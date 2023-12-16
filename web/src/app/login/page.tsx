@@ -1,5 +1,5 @@
-import ActionButton from "../components/action.button";
-import { ButtonType } from "../components/action.button";
+import ActionButton from "../components/button.action";
+import { ButtonType } from "../components/button.action";
 import Navigation from "../components/navigation";
 
 export default function Login() {
