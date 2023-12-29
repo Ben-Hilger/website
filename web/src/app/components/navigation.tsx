@@ -2,7 +2,6 @@
 
 import { usePathname } from 'next/navigation';
 import LinkItem from './link';
-import Feature from '../lib/feature/feature';
 import SocialIcon, { SocialIconType } from './social.icon';
 
 export default function Navigation() {
@@ -34,10 +33,7 @@ export default function Navigation() {
             <LinkItem href="/" isSelected={ isSelected("/") } label="Home"/>
           </li>
           <li>
-            <LinkItem target="_blank" href="https://ben-hilger.github.io/about" isSelected={ false } label="About"/>
-          </li>
-          <li>
-            <LinkItem target="_blank" href="https://ben-hilger.github.io/" isSelected={ false } label="Blog" />
+            <LinkItem target="_blank" href="https://dev.to/benhilger" isSelected={ false } label="Blog" />
           </li>
           <li>
             <LinkItem target="_blank" href="https://github.com/Ben-Hilger/LeetCode" isSelected={ false } label="LeetCode" />
