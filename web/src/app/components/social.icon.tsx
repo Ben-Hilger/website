@@ -14,7 +14,7 @@ const gitHubSVG = (
   type="button"
   data-te-ripple-init
   data-te-ripple-color="light"
-  className="github-button inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+  className="social-icon github-button border-rounded p-1 fs-xsmall fw-medium text-01">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="h-4 w-4"
@@ -32,7 +32,7 @@ const linkedInSVG = (
   type="button"
   data-te-ripple-init
   data-te-ripple-color="light"
-  className="linkedin-button inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+  className="social-icon linkedin-button border-rounded p-1 fs-xmall fw-medium text-01"> 
   <svg
     xmlns="http://www.w3.org/2000/svg"
     className="h-4 w-4"

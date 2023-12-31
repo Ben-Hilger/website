@@ -1,19 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
 }
 
 body {
@@ -24,6 +13,9 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    margin: 0;
+    padding: 0;
+    height: 100vh;
 }
 
 .w-50 {
@@ -38,9 +30,37 @@ body {
   width: 100%;
 }
 
+.navigation {
+    background-color: var(--background-01);
+    border: 1px solid var(--border-02);
+    height: 100px;
+}
+
+.navigation ul {
+    background-color: var(--background-01);
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation a {
+    text-decoration: none;
+}
+
+.wrapper {
+    margin-top: 100px;
+}
+
 .title {
   font-weight: 500;
   font-size: 32px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .github-icon {
@@ -56,9 +76,10 @@ body {
 }
 
 .linkedin-button {
-  background-color: #0077b5
+  background-color: #0077b5;
 }
 
-.youtube-icon {
-  color: #ff0000
+.social-icon svg {
+    height: 1rem;
+    width: 1rem;
 }
