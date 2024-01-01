@@ -11,6 +11,7 @@ export default function Portfolio() {
         new CardInfo(4, "Language Basics", "This project is to store the basics of programming languages I'm currently learning.", "https://github.com/Ben-Hilger/language-basics"),
         new CardInfo(5, "LeetCode", "This project stores solutions I've written for different LeetCode problems", "https://github.com/Ben-Hilger/LeetCode"),
         new CardInfo(6, "Data Structures", "Here I've taken time to implement different data structures, currently in C, from scratch to gain a deeper understanding of the underlying logic", "https://github.com/Ben-Hilger/data-structures"),
+        new CardInfo(7, "HilgerCSS", "This is a custom css library that I use to learn more css. This powers the styling of ben-hilger.com", "https://github.com/Ben-Hilger/website/blob/main/web/src/app/hilger.css")
     ];
 
     function getPortfolioItems() {
