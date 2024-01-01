@@ -17,7 +17,7 @@ export default function Navigation() {
                 <div className="navigation-wrapper align-items-center justify-content-between ml-auto mr-auto p-1">
                     <span className="align-self-center fs-1_5 fw-semibold whitespace-nowrap">Ben Hilger</span>
                     <div id="navbar-sticky">
-                        <ul className="w-100 flex flex-row p-0_25 gap-5 fw-medium rounded">
+                        <ul className="w-100 p-0_25 fw-medium rounded">
                             <li>
                                 <LinkItem href="/" isSelected={ isSelected("/") } label="Home"/>
                             </li>

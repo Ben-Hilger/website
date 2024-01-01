@@ -44,6 +44,9 @@ body {
 
 .navigation ul {
     background-color: var(--background-01);
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
 }
 
 .navigation li {
@@ -145,15 +148,21 @@ body {
     }
     
     .navigation {
-        height: 200px;
+        height: 250px;
     }
     
+    .navigation ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.25rem;
+    }
+
     .navigation-wrapper {
         flex-direction: column;
     }
 
     .wrapper {
-        margin-top: 200px;
+        margin-top: 250px;
     }
 
 }
