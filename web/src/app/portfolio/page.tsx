@@ -6,12 +6,13 @@ class PortfolioItem {
 }
 
 const items: PortfolioItem[] = [
-    new PortfolioItem(1, "Language Basics", "This project is to store the basics of programming languages I'm currently learning.", "https://github.com/Ben-Hilger/language-basics"),
-    new PortfolioItem(2, "Personal Website", "This project stores the code that runs https://www.ben-hilger.com", "https://github.com/Ben-Hilger/website"),
-    new PortfolioItem(6, "Advent of Code", "This project stores the code that I write to solve advent of code problems (https://adventofcode.com/)", "https://github.com/Ben-Hilger/advent-of-code"),
-    new PortfolioItem(3, "Data Structures", "Here I've taken time to implement different data structures, currently in C, from scratch to gain a deeper understanding of the underlying logic", "https://github.com/Ben-Hilger/data-structures"),
-    new PortfolioItem(4, "NVIM Config", "This project stores my current configuring for nvim, a terminal-based editor I use for perosnal projects", "https://github.com/Ben-Hilger/nvim-config"),
-    new PortfolioItem(5, "LeetCode", "This project stores solutions I've written for different LeetCode problems", "https://github.com/Ben-Hilger/LeetCode")
+    new PortfolioItem(1, "Personal Website", "This project stores the code that runs https://www.ben-hilger.com", "https://github.com/Ben-Hilger/website"),
+    new PortfolioItem(2, "Advent of Code", "This project stores the code that I write to solve advent of code problems (https://adventofcode.com/)", "https://github.com/Ben-Hilger/advent-of-code"),
+    new PortfolioItem(3, "NVIM Config", "This project stores my current configuring for nvim, a terminal-based editor I use for perosnal projects", "https://github.com/Ben-Hilger/nvim-config"), 
+    new PortfolioItem(4, "Language Basics", "This project is to store the basics of programming languages I'm currently learning.", "https://github.com/Ben-Hilger/language-basics"),
+    new PortfolioItem(5, "LeetCode", "This project stores solutions I've written for different LeetCode problems", "https://github.com/Ben-Hilger/LeetCode"),
+    new PortfolioItem(6, "Data Structures", "Here I've taken time to implement different data structures, currently in C, from scratch to gain a deeper understanding of the underlying logic", "https://github.com/Ben-Hilger/data-structures"),
+
 ];
 
 export default function Portfolio() {
@@ -24,7 +25,7 @@ export default function Portfolio() {
         return items.map((item) => {
             return (
                 <div key={item.id} 
-                    className="border-rounded background-01 cursor-pointer pl-1 mb-1"
+                    className="portfolio-item border-rounded background-01 cursor-pointer pl-1 mb-1"
                     onClick={ () => { navigateToLink(item) } }>
                     <h3>{ item.title }</h3>
                     <p>{ item.description }</p>

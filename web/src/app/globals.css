@@ -58,9 +58,12 @@ body {
 }
 
 .social-icon {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 2px 2px gray;
+    border: none;
 }
 
 .github-icon {
@@ -82,4 +85,23 @@ body {
 .social-icon svg {
     height: 1rem;
     width: 1rem;
+}
+
+.welcome-home {
+    font-size: 64px;
+    animation: fadeIn 2s;
+    margin: 0;
+}
+
+.welcome-call-to-action {
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.portfolio-item {
+    box-shadow: 2.5px 2.5px gray;
 }
