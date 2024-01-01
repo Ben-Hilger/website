@@ -1,16 +1,18 @@
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
+    color: rgb(var(--foreground-rgb));
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
     margin: 0;
@@ -18,16 +20,20 @@ body {
     height: 100vh;
 }
 
+.w-25 {
+    width: 25%;
+}
+
 .w-50 {
-  width: 50%;
+    width: 50%;
 }
 
 .w-75 {
-  width: 75%;
+    width: 75%;
 }
 
 .w-100 {
-  width: 100%;
+    width: 100%;
 }
 
 .navigation {
@@ -44,6 +50,11 @@ body {
     list-style: none;
 }
 
+.navigation-wrapper {
+    display: flex; 
+    flex-direction: row;
+}
+
 .navigation a {
     text-decoration: none;
 }
@@ -53,8 +64,8 @@ body {
 }
 
 .title {
-  font-weight: 500;
-  font-size: 32px;
+    font-weight: 500;
+    font-size: 32px;
 }
 
 .social-icon {
@@ -67,19 +78,19 @@ body {
 }
 
 .github-icon {
-  color: #333;
+    color: #333;
 }
 
 .github-button {
-  background-color: #333
+    background-color: #333
 }
 
 .linkedin-icon {
-  color: #0077b5;
+    color: #0077b5;
 }
 
 .linkedin-button {
-  background-color: #0077b5;
+    background-color: #0077b5;
 }
 
 .social-icon svg {
@@ -104,4 +115,45 @@ body {
 
 .portfolio-item {
     box-shadow: 2.5px 2.5px gray;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.portfolio-list {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1400px) {
+    .card-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portfolio-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+    .about-image {
+        display: none;
+    }
+    
+    .navigation {
+        height: 200px;
+    }
+    
+    .navigation-wrapper {
+        flex-direction: column;
+    }
+
+    .wrapper {
+        margin-top: 200px;
+    }
+
 }
