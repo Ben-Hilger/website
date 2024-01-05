@@ -32,7 +32,14 @@ export const books: Book[] = [
     new Book(23, "https://storage.googleapis.com/hilger-personal-books/five_dysfunctions_of_a_team.jpg", "Five Dysfunctions of a team", BookState.Read),
     new Book(24, "https://storage.googleapis.com/hilger-personal-books/ghost_town_living.jpg", "Ghost Town Living", BookState.Not_Read),
     new Book(25, "https://storage.googleapis.com/hilger-personal-books/breaking_free_from_broke.jpg", "Breaking Free From Broke", BookState.Not_Read),
-    new Book(24, "https://storage.googleapis.com/hilger-personal-books/millionaire_mission.jpg", "Millionaire Mission", BookState.Not_Read)
+    new Book(26, "https://storage.googleapis.com/hilger-personal-books/millionaire_mission.jpg", "Millionaire Mission", BookState.Not_Read),
+    new Book(27, "https://storage.googleapis.com/hilger-personal-books/elon_musk.jpg", "Elon Musk", BookState.Not_Read),
+    new Book(28, "https://storage.googleapis.com/hilger-personal-books/gap_and_gain.jpg", "The Gap and Gain", BookState.Not_Read),
+    new Book(29, "https://storage.googleapis.com/hilger-personal-books/extreme_ownership.jpg", "Extreme Ownership", BookState.Not_Read),
+    new Book(30, "https://storage.googleapis.com/hilger-personal-books/the_toyota_way.jpg", "The Toyota Way", BookState.Not_Read),
+    new Book(31, "https://storage.googleapis.com/hilger-personal-books/the_startup_way.jpg", "The Startup Way", BookState.Not_Read),
+    new Book(32, "https://storage.googleapis.com/hilger-personal-books/the_5am_club.jpg", "The 5AM Club", BookState.Not_Read),
+    new Book(33, "https://storage.googleapis.com/hilger-personal-books/the_amazon_way.jpg", "The Amazon Way", BookState.Not_Read)
 ]
 
 
