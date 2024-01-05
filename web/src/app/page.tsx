@@ -1,30 +1,5 @@
-import Image from "next/image";
 import ImageGallery, { ImageDetails } from "./components/image.gallery";
-
-enum BookState {
-    Read, Reading, Not_Read
-}
-
-class Book {
-    constructor(public id: number, public src: string, public alt: string, public state: BookState) {}
-}
-
-const books: Book[] = [
-    new Book(1, "https://storage.googleapis.com/hilger-personal-books/lean_startup.jpg", "The Lean Startup", BookState.Read),
-    new Book(2, "https://storage.googleapis.com/hilger-personal-books/ego_is_the_enemy.jpg", "Ego is the Enemy", BookState.Read),
-    new Book(3, "https://storage.googleapis.com/hilger-personal-books/beyond_disruption.jpg", "Beyond Disruption", BookState.Read),
-    new Book(4, "https://storage.googleapis.com/hilger-personal-books/continuous_discovery_habits.jpg", "Continuous Discovery Habits", BookState.Read),
-    new Book(5, "https://storage.googleapis.com/hilger-personal-books/ride_of_a_lifetime.jpg", "Ride of a Lifetime", BookState.Read),
-    new Book(6, "https://storage.googleapis.com/hilger-personal-books/how_will_you_measure_life.jpg", "How will you measure life?", BookState.Read),
-    new Book(7, "https://storage.googleapis.com/hilger-personal-books/algorithms_to_live_by.jpg", "Algorithms to live by", BookState.Read),
-    new Book(8, "https://storage.googleapis.com/hilger-personal-books/engineer_survival_guide.jpg", "Engineer Survival Guide", BookState.Read),
-    new Book(9, "https://storage.googleapis.com/hilger-personal-books/how_the_mighty_fall.jpg", "How the Mighty Fall", BookState.Read),
-    new Book(10, "https://storage.googleapis.com/hilger-personal-books/handling_difficult_people.jpg", "Handling Difficult People", BookState.Read),
-    new Book(11, "https://storage.googleapis.com/hilger-personal-books/after_steve.jpg", "After Steve", BookState.Read),
-    new Book(12, "https://storage.googleapis.com/hilger-personal-books/the_wealthy_way.jpg", "The Weathly Way", BookState.Read),
-    new Book(13, "https://storage.googleapis.com/hilger-personal-books/clean_architecture.jpg", "Clean Architecture", BookState.Reading),
-    new Book(14, "https://storage.googleapis.com/hilger-personal-books/clean_code.jpg", "Clean Code", BookState.Reading)
-]
+import { books, BookState} from "./lib/book";
 
 export default function Home() {
 
@@ -32,7 +7,7 @@ export default function Home() {
         return books
                 .filter((book) => book.state === bookState)
                 .map((book) => {
-                    return new ImageDetails(book.id, book.src, book.alt);
+                    return new ImageDetails(book.src, book.alt);
                 });
     }
 
@@ -52,6 +27,11 @@ export default function Home() {
                 <h3>Books I Have Read</h3>
                 <ImageGallery images={ getImages(BookState.Read) }/>
             </div>
+            <div className="flex flex-col align-items-center">
+                <h3>Books I Use for Reference</h3>
+                <ImageGallery images={ getImages(BookState.Reference) }/>
+            </div>
+
         </main>
     )
 }

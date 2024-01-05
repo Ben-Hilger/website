@@ -145,7 +145,7 @@ body {
     white-space: nowrap;
 
     animation-name: scroll;
-    animation-duration: 10s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export class ImageDetails {
-    constructor(public id: number, public src: string, public alt: string) {}
+    constructor(public src: string, public alt: string) {}
 }
 
 interface ImageGalleryProps {
@@ -27,9 +27,9 @@ export default function ImageGallery(props: ImageGalleryProps) {
         if (isScrolling()) {
             imagesToMap.push(...props.images);
         }
-        return imagesToMap.map(image => {
+        return imagesToMap.map((image, index) => {
            return (
-            <Image className="scroll-image ml-1 mr-1" key={image.id} src={image.src} alt={image.alt} width={150} height={225} />
+            <Image className="scroll-image ml-1 mr-1" key={index} src={image.src} alt={image.alt} width={150} height={225} />
            );
         });
     }
