@@ -130,13 +130,46 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.small-project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.text-disabled {
+    color: gray;
+}
+
+#image-gallery {
+    overflow: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    animation-name: scroll;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#image-gallery .scroll-image {
+    height: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 @media screen and (max-width: 1400px) {
     .card-list {
         display: flex;
         flex-direction: column;
     }
 
-    .portfolio-list {
+    .portfolio-list, .small-project-list {
         grid-template-columns: 1fr;
     }
 }
