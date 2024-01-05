@@ -139,18 +139,20 @@ body {
     color: gray;
 }
 
-#image-gallery {
+.image-gallery {
     overflow: hidden;
     overflow-y: hidden;
     white-space: nowrap;
+}
 
+.image-gallery-scroll {
     animation-name: scroll;
     animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
-#image-gallery .scroll-image {
+.image-gallery-scroll .scroll-image {
     height: 100%;
 }
 
@@ -198,4 +200,28 @@ body {
         margin-top: 250px;
     }
 
+    .image-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .image-gallery-scroll {
+        animation-name: none;
+    }
 }
+
+@media screen and (max-width: 765px) {
+
+    .image-gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 545px) {
+
+    .image-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+

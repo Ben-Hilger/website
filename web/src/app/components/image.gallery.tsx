@@ -15,11 +15,11 @@ export default function ImageGallery(props: ImageGalleryProps) {
         return props.images.length >= 10;
     }
 
-    function getImageGalleryId() {
+    function getImageGalleryClass() {
         if (isScrolling()) {
-            return "image-gallery";
+            return "image-gallery image-gallery-scroll";
         }
-        return "";
+        return "image-gallery";
     }
 
     function getImages() {
@@ -35,7 +35,7 @@ export default function ImageGallery(props: ImageGalleryProps) {
     }
 
     return (
-        <div id={ getImageGalleryId() }>
+        <div className={ getImageGalleryClass() }>
             { getImages() }
 
         </div>
