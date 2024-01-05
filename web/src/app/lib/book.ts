@@ -29,7 +29,10 @@ export const books: Book[] = [
     new Book(20, "https://storage.googleapis.com/hilger-personal-books/how_to_win_friends_and_influence_people.jpg", "How to win friends and influence people", BookState.Read),
     new Book(21, "https://storage.googleapis.com/hilger-personal-books/invaluable_laws_of_growth.jpg", "15 Invaluable Laws of Growth", BookState.Read),
     new Book(22, "https://storage.googleapis.com/hilger-personal-books/the_ideal_team_player.jpg", "The ideal team player", BookState.Read),
-    new Book(23, "https://storage.googleapis.com/hilger-personal-books/five_dysfunctions_of_a_team.jpg", "Five Dysfunctions of a team", BookState.Read)
+    new Book(23, "https://storage.googleapis.com/hilger-personal-books/five_dysfunctions_of_a_team.jpg", "Five Dysfunctions of a team", BookState.Read),
+    new Book(24, "https://storage.googleapis.com/hilger-personal-books/ghost_town_living.jpg", "Ghost Town Living", BookState.Not_Read),
+    new Book(25, "https://storage.googleapis.com/hilger-personal-books/breaking_free_from_broke.jpg", "Breaking Free From Broke", BookState.Not_Read),
+    new Book(24, "https://storage.googleapis.com/hilger-personal-books/millionaire_mission.jpg", "Millionaire Mission", BookState.Not_Read)
 ]
 
 
