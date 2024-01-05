@@ -13,9 +13,13 @@ export async function GET(
     const commits: GithubCommit[] = [];
 
     try {
+        const gitHubAccessToken = process.env.GITHUB_ACCESS_TOKEN ?? "";
+        if (gitHubAccessToken === "") {
+            return Response.error(); 
+        }
         const response = await fetch(githubUrl, { 
             headers: {
-                'Authorization': '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' 
+                'Authorization': gitHubAccessToken
             }
         });
 
