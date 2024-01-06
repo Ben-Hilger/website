@@ -147,7 +147,7 @@ body {
 
 .image-gallery-scroll {
     animation-name: scroll;
-    animation-duration: 15s;
+    animation-duration: 25s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -158,10 +158,10 @@ body {
 
 @keyframes scroll {
     0% {
-        transform: translateX(0);
+        transform: translateX(75%);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-75%);
     }
 }
 
