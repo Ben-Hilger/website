@@ -152,7 +152,7 @@ body {
     animation-timing-function: linear;
 }
 
-.image-gallery-scroll .scroll-image {
+.image-gallery-scroll .scroll-image,.scroll-image-extra {
     height: 100%;
 }
 
@@ -208,6 +208,10 @@ body {
 
     .image-gallery-scroll {
         animation-name: none;
+    }
+
+    .scroll-image-extra {
+        display: none;
     }
 }
 
