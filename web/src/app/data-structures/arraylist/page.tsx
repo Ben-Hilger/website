@@ -132,7 +132,7 @@ export default function ArrayList() {
         let emptySlots = [];
 
         for (let i = 0; i < numberOfEmptySlots; i++) {
-            emptySlots.push(<div key={i} className="mr-1 mt-1 border-01 p-2 border-rounded bg-gray-300">
+            emptySlots.push(<div key={i + offset} className="mr-1 mt-1 border-01 p-2 border-rounded bg-gray-300">
             </div>)
         }
 
