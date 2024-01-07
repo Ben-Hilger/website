@@ -1,9 +1,10 @@
 'use client';
 
 interface CardProps {
-  title: string,
-  description: string,
-  link?: string|null
+    title: string,
+    description: string,
+    link?: string|null
+    target?: string|null
 }
 
 export default function Card(props: CardProps) {
@@ -12,7 +13,7 @@ export default function Card(props: CardProps) {
        if (!props.link) {
            return;
        }
-       window.open(props.link, "_blank");
+       window.open(props.link, props.target ?? "_blank");
     }
 
     function getClasses() {
