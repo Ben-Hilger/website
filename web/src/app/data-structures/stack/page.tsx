@@ -105,6 +105,7 @@ export default function Page() {
                     </div>
                 </div>
                 <div className="flex flex-col align-items-center mt-3">
+                    <b className="mb-1">Top of Stack</b>
                     { stack.length > 0 ? displayStack() : <p>Add an item to the stack to see it here! </p>}
                 </div>
             </div>
