@@ -227,7 +227,7 @@ export default function ArrayList() {
                 <div className="p-1 flex w-50 justify-content-center align-items-center">
                     <p><b>Result</b>: {resultValue}</p>
                 </div>
-                <div className="flex flex-row align-items-center w-75 flex-wrap justify-content-center">
+                <div className="flex flex-row align-items-center w-75 flex-wrap justify-content-center mb-5">
                     {getArrayListDisplay()}
                     {getEmptySlots()}
                 </div>
