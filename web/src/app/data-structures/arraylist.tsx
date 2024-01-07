@@ -239,6 +239,7 @@ export default function ArrayList() {
             <b className="text-2xl">ArrayList</b>
             <p><b>Length</b>: {length}</p>
             <p><b>Capacity</b>: {capacity}</p>
+            <p className="text-center pl-5 pr-5">An <b>ArrayList</b> abstracts the allocation and management of the underlying array. An array has fixed memory, with a defined length. So, when you <b>exceeded the defined capacity of the array</b>, an ArrayList will automatically create a new array with a larger size, and move the existing array into the new array.</p> 
             <div className="flex flex-col w-75">
                 <div className="flex flex-row">
                     <div className="flex flex-col align-items-center justify-content-center p-0_5 pl-1 pr-1 mt-1 mr-2 w-100">
