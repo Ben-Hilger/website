@@ -1,6 +1,7 @@
 'use client';
 
 import React from "react";
+import DataStructureNavigation from "../datastructure.navigation";
 
 export default function ArrayList() {
 
@@ -235,33 +236,36 @@ export default function ArrayList() {
     }
 
     return (
-        <div className="w-100 flex flex-col align-items-center">
-            <b className="text-2xl">ArrayList</b>
-            <p><b>Length</b>: {length}</p>
-            <p><b>Capacity</b>: {capacity}</p>
-            <p className="text-center pl-5 pr-5">An <b>ArrayList</b> abstracts the allocation and management of the underlying array. An array has fixed memory, with a defined length. So, when you <b>exceeded the defined capacity of the array</b>, an ArrayList will automatically create a new array with a larger size, and move the existing array into the new array.</p> 
-            <div className="flex flex-col w-75">
-                <div className="flex flex-row">
-                    <div className="flex flex-col align-items-center justify-content-center p-0_5 pl-1 pr-1 mt-1 mr-2 w-100">
-                        { removeValueRegion() }
+        <>
+            <DataStructureNavigation />
+            <div className="w-100 flex flex-col align-items-center">
+                <b className="text-2xl">ArrayList</b>
+                <p><b>Length</b>: {length}</p>
+                <p><b>Capacity</b>: {capacity}</p>
+                <p className="text-center pl-5 pr-5">An <b>ArrayList</b> abstracts the allocation and management of the underlying array. An array has fixed memory, with a defined length. So, when you <b>exceeded the defined capacity of the array</b>, an ArrayList will automatically create a new array with a larger size, and move the existing array into the new array.</p> 
+                <div className="flex flex-col w-75">
+                    <div className="flex flex-row">
+                        <div className="flex flex-col align-items-center justify-content-center p-0_5 pl-1 pr-1 mt-1 mr-2 w-100">
+                            { removeValueRegion() }
+                        </div>
+                        <div className="flex flex-col align-items-center justify-content-center p-0_5 pl-1 pr-1 mt-1 mr-2 w-100">
+                            { removeAtInputRegion() }
+                        </div>
                     </div>
-                    <div className="flex flex-col align-items-center justify-content-center p-0_5 pl-1 pr-1 mt-1 mr-2 w-100">
-                        { removeAtInputRegion() }
+                    <div className="flex flex-row">
+                        <div className="flex flex-col align-items-center justify-content-center p-0_5 pl-1 pr-1 mt-1 mr-2 w-100">
+                            { getAtInputRegion() }
+                        </div>
+                        <div className="flex flex-col justify-content-center align-items-center w-100">
+                            { modifyArrayListInputRegion() }
+                        </div>
                     </div>
                 </div>
-                <div className="flex flex-row">
-                    <div className="flex flex-col align-items-center justify-content-center p-0_5 pl-1 pr-1 mt-1 mr-2 w-100">
-                        { getAtInputRegion() }
-                    </div>
-                    <div className="flex flex-col justify-content-center align-items-center w-100">
-                        { modifyArrayListInputRegion() }
-                    </div>
+                <div className="flex flex-row align-items-center w-75 overflow-scroll">
+                    { getArrayListDisplay() }
+                    { getEmptySlots() }
                 </div>
             </div>
-            <div className="flex flex-row align-items-center w-75 overflow-scroll">
-                { getArrayListDisplay() }
-                { getEmptySlots() }
-            </div>
-        </div>
+        </>
     );
 }

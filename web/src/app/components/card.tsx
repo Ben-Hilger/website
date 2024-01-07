@@ -2,7 +2,7 @@
 
 interface CardProps {
     title: string,
-    description: string,
+    description?: string,
     link?: string|null
     target?: string|null
 }
@@ -24,10 +24,17 @@ export default function Card(props: CardProps) {
         return base;
     }
 
+    function getDescription() {
+        if (!props.description || props.description === "") {
+            return <></>
+        }
+        return <p>{ props.description }</p>
+    }
+
     return (
     <div className={ getClasses() } onClick={() => { navigateTo() }}>
         <b className="text-lg">{ props.title }</b>
-        <p>{ props.description }</p>
+        { getDescription() }
     </div>
   );
 }
