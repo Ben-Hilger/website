@@ -26,7 +26,7 @@ export default function Card(props: CardProps) {
 
     return (
     <div className={ getClasses() } onClick={() => { navigateTo() }}>
-        <h3>{ props.title }</h3>
+        <b className="text-lg">{ props.title }</b>
         <p>{ props.description }</p>
     </div>
   );

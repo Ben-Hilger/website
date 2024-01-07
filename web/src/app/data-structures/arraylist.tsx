@@ -62,7 +62,6 @@ export default function ArrayList() {
         let array = arrayValidation.array;
         array.splice(result, 1);
         updateStates(array, arrayValidation.capacity, newLength);
-
     }
 
 
@@ -117,13 +116,13 @@ export default function ArrayList() {
 
     function getArrayListDisplay() {
         return arrayList.map((item, index) => {
-                        return (
-                            <div className="mr-1 mt-1 border-01 p-2 border-rounded" key={index}>
-                                <div className="flex flex-col">
-                                    <p className="m-0 p-0">{item}</p>
-                                </div>
-                            </div>
-                        );
+            return (
+                <div className="mr-1 mt-1 border-01 p-2 border-rounded" key={index}>
+                    <div className="flex flex-col">
+                        <p className="m-0 p-0">{item}</p>
+                    </div>
+                 </div>
+            );
         })
     }
 
