@@ -47,7 +47,7 @@ export default function ArrayList() {
             return;
         }
         const newLength = decrementLength();
-        const arrayValidation = validateArraySize(newLength);
+        const arrayValidation = validateArraySize(newLength, true);
         let array = arrayValidation.array;
         array.splice(removeAtValue, 1);
         updateStates(array, arrayValidation.capacity, newLength);
@@ -60,7 +60,7 @@ export default function ArrayList() {
             return;
         }
         const newLength = decrementLength();
-        const arrayValidation = validateArraySize(newLength);
+        const arrayValidation = validateArraySize(newLength, true);
         let array = arrayValidation.array;
         array.splice(result, 1);
         updateStates(array, arrayValidation.capacity, newLength);
@@ -84,16 +84,19 @@ export default function ArrayList() {
         return length - 1;
     }
 
-    function validateArraySize(length: number): { capacity: number, array: Array<number> } {
+    function validateArraySize(length: number, isRemoving = false): { capacity: number, array: Array<number> } {
         let newArray = arrayList;
         let newCapacity = capacity;
         if (length > capacity) {
+            setResultValue("Did you notice that the capacity doubled? Once the capacity is exceeded, it doubles, and then creates a new array with that expanded capacity. This can be different depending on how the underlying ArrayList is implemented");
             newCapacity *= 2;
             let expandedArray = new Array(newCapacity);
             for (let i = 0; i < newArray.length; i++) {
                 expandedArray[i] = newArray[i];
             }
             newArray = expandedArray;
+        } else if (length < capacity / 2 && isRemoving) {
+            setResultValue("Do you notice how, even though less than half of the capacity is used, the capacity remains the same? Typically, ArrayList's do not remove capacity, and only increase the capacity as needed"); 
         }
         return { capacity: newCapacity, array: newArray };
     }
@@ -109,11 +112,6 @@ export default function ArrayList() {
         }
         const indexValue = arrayList[getIndex];
         setResultValue(`The value is: ${indexValue}`);
-    }
-
-    function resetGetIndexValue() {
-        setResultValue("");
-        setGetValue(0);
     }
 
     function getArrayListDisplay() {
@@ -226,10 +224,10 @@ export default function ArrayList() {
                             {modifyArrayListInputRegion()}
                     </div>
                 </div>
-                <div className="p-1">
-                    <p><b>Result</b>: {resultValue} </p>
+                <div className="p-1 flex w-50 justify-content-center align-items-center">
+                    <p><b>Result</b>: {resultValue}</p>
                 </div>
-                <div className="flex flex-row align-items-center w-75 flex-wrap">
+                <div className="flex flex-row align-items-center w-75 flex-wrap justify-content-center">
                     {getArrayListDisplay()}
                     {getEmptySlots()}
                 </div>
