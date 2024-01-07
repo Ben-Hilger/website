@@ -21,6 +21,8 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
 
 .w-25 {
@@ -143,28 +145,42 @@ body {
 }
 
 .image-gallery {
-    overflow: hidden;
-    overflow-y: hidden;
     white-space: nowrap;
 }
 
 .image-gallery-scroll {
-    animation-name: scroll;
-    animation-duration: 25s;
+    animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+.image-gallery-scroll-10 {
+    animation-name: scroll-10;
+}
+
+.image-gallery-scroll-15 {
+    animation-name: scroll-15;
 }
 
 .image-gallery-scroll .scroll-image,.scroll-image-extra {
     height: 100%;
 }
 
-@keyframes scroll {
+@keyframes scroll-15 {
     0% {
-        transform: translateX(75%);
+        transform: translateX(180%);
     }
     100% {
-        transform: translateX(-75%);
+        transform: translateX(-200%);
+    }
+}
+
+@keyframes scroll-10 {
+    0% {
+        transform: translateX(110%);
+    }
+    100% {
+        transform: translateX(-110%);
     }
 }
 

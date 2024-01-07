@@ -13,10 +13,11 @@ export default function ImageGallery(props: ImageGalleryProps) {
     const isScrolling = props.images.length >= 10;
 
     function getImageGalleryClass() {
+        let base = "image-gallery flex flex-row";
         if (isScrolling) {
-            return "image-gallery image-gallery-scroll";
+            base += " overflow-scroll"
         }
-        return "image-gallery";
+        return base;
     }
 
     function getDuplicateImages() {
@@ -51,9 +52,10 @@ export default function ImageGallery(props: ImageGalleryProps) {
     }
 
     return (
-        <div className={ getImageGalleryClass() }>
-            { getImages() }  
-            { getDuplicateImages() }
+        <div className="flex flex-row">
+            <div className={ getImageGalleryClass() }>
+                { getImages() }  
+            </div>
         </div>
     );
 }
