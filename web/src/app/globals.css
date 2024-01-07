@@ -41,7 +41,7 @@ body {
 
 .navigation {
     background-color: var(--background-01);
-    border: 1px solid var(--border-02);
+    border-bottom: 1px solid var(--border-01);
     height: 100px;
 }
 
