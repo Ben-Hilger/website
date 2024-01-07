@@ -8,7 +8,8 @@ export default function About() {
         new CardInfo(2, "DNS", "ben-hilger.com is registered using SquareSpace domains. Along with that, ben-hilger.com uses SquareSpace namespace servers and services to add more DNS routes", null),
         new CardInfo(3, "NGINX", "NGINX listens on port 80 and 443 and provides a proxy to route requests to the NEXT.js server, exposing the website to the public", null),
         new CardInfo(4, "NEXT.js", "This website is built using NEXT.js, which uses React server-side components and typescript", null),
-        new CardInfo(5, "SSL Certificate Management", "SSL Certificates are used to ensure secure HTTPS communication between your browser and the server. Cert-bot is installed and utilizwed to issue valid certificates for ben-hilger.com", null)
+        new CardInfo(5, "SSL Certificate Management", "SSL Certificates are used to ensure secure HTTPS communication between your browser and the server. Cert-bot is installed and utilizwed to issue valid certificates for ben-hilger.com", null),
+        new CardInfo(6, "Cloud CDN", "The images used on ben-hilger.com are hosted using Cloud CDN, which points to a Google Cloud Storage Bucket that serves the images (image.ben-hilger.com) ", null)
     ];
     
     function getCards() {
