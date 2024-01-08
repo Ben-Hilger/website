@@ -7,11 +7,11 @@ export default class ApiService {
     }
 
     sendHelloMessage(message: string) {
-        return fetch(`api/v1/hello/${message}`);
+        return fetch(`/api/v1/hello/${message}`);
     }
 
     sendNumberMessage(message: string) {
-        return fetch(`api/v1/sum`, {
+        return fetch(`/api/v1/sum`, {
             method: 'POST',
             body: JSON.stringify(message),
             headers: {
@@ -20,6 +20,6 @@ export default class ApiService {
         });
     }
     getGithubUrl(repository: string) {
-        return `api/v1/github/${repository}`;
+        return `/api/v1/github/${repository}`;
     }
 }

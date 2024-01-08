@@ -40,7 +40,7 @@ import Image from "next/image";
             <div className="p-1 border-bottom">
                 <h3 className="p-0 m-0 mb-1">Recent GitHub Commits</h3>
                 <p className="m-0 p-0 mb-1"><b>Repository</b>: <a target="_blank" href={props.link}>{ props.name }</a></p>
-                <p className="m-0 p-0"><b>API Call</b>: /{apiService.getGithubUrl(props.repository)}</p>
+                <p className="m-0 p-0"><b>API Call</b>: {apiService.getGithubUrl(props.repository)}</p>
             </div>
             <div className="flex flex-col border-rounded" style={{ height: "50vh", overflow: "scroll"}}>
                 { 
