@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.navigation {
+    background-color: var(--background-01);
+    border-bottom: 1px solid var(--border-01);
+    height: 100px;
+}
+
+.navigation ul {
+    background-color: var(--background-01);
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation-wrapper {
+    display: flex; 
+    flex-direction: row;
+}
+
+.navigation a {
+    text-decoration: none;
+}
+
+.wrapper {
+    margin-top: 100px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.social-icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px gray;
+    border: none;
+}
+
+.github-icon {
+    color: #333;
+}
+
+.github-button {
+    background-color: #333
+}
+
+.linkedin-icon {
+    color: #0077b5;
+}
+
+.linkedin-button {
+    background-color: #0077b5;
+}
+
+.social-icon svg {
+    height: 1rem;
+    width: 1rem;
+}
+
+.welcome-home {
+    font-size: 64px;
+    animation: fadeIn 2s;
+    margin: 0;
+}
+
+.welcome-call-to-action {
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.portfolio-item {
+    box-shadow: 2.5px 2.5px gray;
+}
+
+.card-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.portfolio-list {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.small-project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.text-disabled {
+    color: gray;
+}
+
+.image-gallery {
+    white-space: nowrap;
+}
+
+.image-gallery-scroll {
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.image-gallery-scroll-10 {
+    animation-name: scroll-10;
+}
+
+.image-gallery-scroll-15 {
+    animation-name: scroll-15;
+}
+
+.image-gallery-scroll .scroll-image,.scroll-image-extra {
+    height: 100%;
+}
+
+@keyframes scroll-15 {
+    0% {
+        transform: translateX(180%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+@keyframes scroll-10 {
+    0% {
+        transform: translateX(110%);
+    }
+    100% {
+        transform: translateX(-110%);
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .card-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portfolio-list, .small-project-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+    .about-image {
+        display: none;
+    }
+    
+    .navigation {
+        height: 250px;
+    }
+    
+    .navigation ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.25rem;
+    }
+
+    .navigation-wrapper {
+        flex-direction: column;
+    }
+
+    .wrapper {
+        margin-top: 250px;
+    }
+
+    .image-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .image-gallery-scroll {
+        animation-name: none;
+    }
+
+    .scroll-image-extra {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 765px) {
+
+    .image-gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 545px) {
+
+    .image-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
