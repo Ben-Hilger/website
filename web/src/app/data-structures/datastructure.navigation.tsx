@@ -8,7 +8,8 @@ type DataStructure = {
 const dataStructures: DataStructure[] = [
    {title: "ArrayList", link: "/data-structures/arraylist"},
    {title: "Stack", link: "/data-structures/stack"},
-   {title: "Queue", link: "/data-structures/queue"}
+   {title: "Queue", link: "/data-structures/queue"},
+   {title: "Linked List", link: "/data-structures/linkedlist"}
 ]
 
 export default function DataStructureNavigation() {
