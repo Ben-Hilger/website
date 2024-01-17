@@ -1,6 +1,7 @@
 <template>
-    <main class="grid grid-cols-3 h-100 p-2 background-inherit gap-2">
-        <Card v-for="(portfolioItem, index) in portfolioItems" 
+    <main class="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 h-100 p-2 background-inherit gap-2">
+        <Card v-for="(portfolioItem, index) in portfolioItems"
+            class="shadow hover:shadow-lg"
             v-bind:key="index"
             v-bind:title="portfolioItem.title"
             v-bind:description="portfolioItem.description"
