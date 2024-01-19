@@ -8,7 +8,7 @@
     </button>
     
     <div class="flex flex-row">
-        <aside id="default-sidebar" class="w-4/12 h-screen border-r" aria-label="Sidebar">
+        <aside id="default-sidebar" class="w-2/12 h-screen border-r" aria-label="Sidebar">
             <div class="h-full px-3 flex-1 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
                 <ul class="space-y-2 font-medium">
                     <li class="cursor-pointer flex hover:text-blue-600 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group flex" 
@@ -25,7 +25,7 @@
             </div>
         </aside>
 
-        <div class="w-auto">
+        <div class="w-10/12">
             <NuxtPage />
         </div>
     </div>
