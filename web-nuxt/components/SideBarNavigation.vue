@@ -42,6 +42,5 @@
     const navigationItems: NavigationItem[] = [
         {name: "Portfolio", path: "/portfolio", target: "_self"},
         {name: "About", path: "/about", target: "_self"},
-        {name: "Blog", path: "https://dev.to/benhilger", target: "_blank"}
     ]
 </script>
