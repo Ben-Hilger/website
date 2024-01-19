@@ -14,7 +14,6 @@
             <h3 className="text-xl font-bold dark:text-white">Books I Have Read</h3>
             <ImageGallery v-bind:images="getImages(BookState.Read)"/>
         </div>
-
     </div>
 </template>
 
