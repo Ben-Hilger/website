@@ -2,16 +2,16 @@
     <div class="flex h-100 flex-col items-center justify-between p-2">
         <h1 class="welcome-title welcome-animation">Welcome!</h1>
         <p class="welcome-animation">Thanks for taking the time to visit my website! To begin, take a look at my <a class="text-blue-600" href="/portfolio">portfolio</a>. If you're interested in learning about tihs website, go check out the <a class="text-blue-600" href="/about">about</a> page.</p>
-        <div className="flex flex-col items-center w-100">
-            <h3 className="text-xl mt-5 font-bold dark:text-white">Books I Am Reading</h3>
+        <div class="flex flex-col items-center w-full">
+            <h4 class="text-xl mt-5 font-bold dark:text-white">Books I Am Reading</h4>
             <ImageGallery v-bind:images="getImages(BookState.Reading)"/>
         </div> 
-        <div className="flex flex-col items-center mt-1 w-100">
-            <h3 className="text-xl font-bold dark:text-white">Books I Plan on Reading</h3>
+        <div class="flex flex-col items-center mt-1 w-full">
+            <h4 class="text-xl font-bold dark:text-white">Books I Plan on Reading</h4>
             <ImageGallery v-bind:images="getImages(BookState.Not_Read)"/>
         </div>  
-        <div className="flex flex-col items-center mt-1 w-100">
-            <h3 className="text-xl font-bold dark:text-white">Books I Have Read</h3>
+        <div class="flex flex-col items-center mt-1 w-full">
+            <h4 class="text-xl font-bold dark:text-white">Books I Have Read</h4>
             <ImageGallery v-bind:images="getImages(BookState.Read)"/>
         </div>
     </div>
