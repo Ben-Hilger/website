@@ -1,5 +1,6 @@
 <template>
-  <div>
-    <SideBarNavigation />
-  </div>
+    <div>
+        <TopBar />
+        <SideBarNavigation />
+    </div>
 </template>
