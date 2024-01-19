@@ -6,28 +6,29 @@
             <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
         </svg>
     </button>
-
-    <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-72 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-        <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-            <ul class="space-y-2 font-medium">
-                <li class="cursor-pointer flex hover:text-blue-600 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group flex" 
-                    v-for="(navItem, index) in navigationItems" 
-                    v-bind:key="index">
-                    <NuxtLink v-bind:to="navItem.path" 
+    
+    <div class="flex flex-row">
+        <aside id="default-sidebar" class="w-4/12 h-screen border-r" aria-label="Sidebar">
+            <div class="h-full px-3 flex-1 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+                <ul class="space-y-2 font-medium">
+                    <li class="cursor-pointer flex hover:text-blue-600 items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group flex" 
+                        v-for="(navItem, index) in navigationItems" 
+                        v-bind:key="index">
+                        <NuxtLink v-bind:to="navItem.path" 
                                 v-bind:target="navItem.target"
                                 class="flex-1"
                                 v-bind:exact-active-class="'text-blue-600'">
-                        {{ navItem.name }}
-                    </NuxtLink>
-                </li>
-            </ul>
+                            {{ navItem.name }}
+                        </NuxtLink>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="w-auto">
+            <NuxtPage />
         </div>
-    </aside>
-
-    <div class="p-4 sm:ml-72">
-        <NuxtPage />
     </div>
-
 </template>
 
 <script setup lang="ts">
@@ -39,7 +40,6 @@
     }
 
     const navigationItems: NavigationItem[] = [
-        {name: "Ben Hilger", path: "/", target: "_self"},
         {name: "Portfolio", path: "/portfolio", target: "_self"},
         {name: "About", path: "/about", target: "_self"},
         {name: "Blog", path: "https://dev.to/benhilger", target: "_blank"}
