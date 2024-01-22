@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col items-center p-2">
         <h1 class="bold text-2xl">What's running ben-hilger.com?</h1>
-        <img src="/personal-website-architecture-diagram.jpg" alt="Persoanl Website Architecture Diagram">
+        <img src="/personal-website-architecture-diagram.jpg" alt="Personal Website Architecture Diagram">
         <div class="flex flex-wrap flex-row pt-5 justify-center">
             <Card
                 class="lg:w-1/6 md:w-1/4 sm:w-full"
