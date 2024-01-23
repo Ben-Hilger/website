@@ -51,7 +51,7 @@ const books: Book[] = [
     { src: "/the_innovators.jpg", alt: "The Innovators", state: BookState.Read },
     { src: "/how_to_win_friends_and_influence_people.jpg", alt: "How to win friends and influence people", state: BookState.Read },
     { src: "/invaluable_laws_of_growth.jpg", alt: "15 Invaluable Laws of Growth", state: BookState.Read },
-    { src: "/the_ideal_team_player.jpg", alt: "The ideal team player", state: BookState.Read },
+    { src: "/the_ideal_team_player.jpg", alt: "The Ideal Team player", state: BookState.Read },
     { src: "/five_dysfunctions_of_a_team.jpg", alt: "Five Dysfunctions of a team", state: BookState.Read },
     { src: "/ghost_town_living.jpg", alt: "Ghost Town Living", state: BookState.Not_Read },
     { src: "/breaking_free_from_broke.jpg", alt: "Breaking Free From Broke", state: BookState.Not_Read },
