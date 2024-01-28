@@ -16,8 +16,6 @@ RUN yarn build
 # Production image, copy all the files and run next
 FROM node:lts-alpine AS runner
 
-ENV PORT 8080
-
 WORKDIR /opt/app
 ENV NODE_ENV=production
 COPY --from=builder /opt/app/next.config.js ./
