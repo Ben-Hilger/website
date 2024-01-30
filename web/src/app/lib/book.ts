@@ -31,7 +31,7 @@ export const books: Book[] = [
     new Book(22, "/the_ideal_team_player.jpg", "The ideal team player", BookState.Read),
     new Book(23, "/five_dysfunctions_of_a_team.jpg", "Five Dysfunctions of a team", BookState.Read),
     new Book(24, "/ghost_town_living.jpg", "Ghost Town Living", BookState.Not_Read),
-    new Book(25, "/breaking_free_from_broke.jpg", "Breaking Free From Broke", BookState.Not_Read),
+    new Book(25, "/breaking_free_from_broke.jpg", "Breaking Free From Broke", BookState.Reading),
     new Book(26, "/millionaire_mission.jpg", "Millionaire Mission", BookState.Not_Read),
     new Book(27, "/elon_musk.jpg", "Elon Musk", BookState.Not_Read),
     new Book(28, "/gap_and_gain.jpg", "The Gap and Gain", BookState.Not_Read),
