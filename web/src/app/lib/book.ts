@@ -23,7 +23,7 @@ export const books: Book[] = [
     new Book(14, "/clean_code.jpg", "Clean Code", BookState.Reference),
     new Book(15, "/atomic_habits.jpg", "Atomic Habits", BookState.Reading),
     new Book(16, "/make_your_bed.jpg", "Make your bed", BookState.Read),
-    new Book(17, "/rust_programming_language.jpg", "Rust Progamming Lanugage", BookState.Not_Read),
+    new Book(17, "/rust_programming_language.jpg", "Rust Progamming Lanugage", BookState.Reading),
     new Book(18, "/dave_ramsey_total_money_makeover.jpg", "Dave Ramsey Total Money Makeover", BookState.Read),
     new Book(19, "/the_innovators.jpg", "The Innovators", BookState.Read),
     new Book(20, "/how_to_win_friends_and_influence_people.jpg", "How to win friends and influence people", BookState.Read),

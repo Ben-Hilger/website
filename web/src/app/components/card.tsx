@@ -19,7 +19,7 @@ export default function Card(props: CardProps) {
     function getClasses() {
         let base = "border-01 border-rounded p-1 m-1";
         if (props.link) {
-            base += " cursor-pointer";
+            base += " cursor-pointer hover:shadow-xl";
         }
         return base;
     }

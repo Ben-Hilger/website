@@ -19,22 +19,26 @@ export default function Navigation() {
                     <div id="navbar-sticky">
                         <ul className="w-100 p-0_25 fw-medium rounded">
                             <li>
-                                <LinkItem href="/" isSelected={ isSelected("/") } label="Home"/>
+                                <LinkItem href="/" isSelected={isSelected("/")} label="Home"/>
                             </li>
                             <li>
-                                <LinkItem href="/portfolio" isSelected= { isSelected("/portfolio") } label="Portfolio" />
+                                <LinkItem href="/portfolio" isSelected={isSelected("/portfolio")} label="Portfolio"/>
                             </li>
                             <li>
-                                <LinkItem href="/about" isSelected= { isSelected("/about") } label="About" />
+                                <LinkItem href="/about" isSelected={isSelected("/about")} label="About"/>
                             </li>
                             <li>
-                                <LinkItem target="_blank" href="https://dev.to/benhilger" isSelected={ false } label="Blog" />
+                                <LinkItem href="/books" isSelected={isSelected("/books")} label="Books"/>
                             </li>
+                            {/*<li>*/}
+                            {/*    <LinkItem target="_blank" href="https://dev.to/benhilger" isSelected={false}*/}
+                            {/*              label="Blog"/>*/}
+                            {/*</li>*/}
                         </ul>
                     </div>
                     <div className="flex mr-1">
                         <div className='mr-1'>
-                            <SocialIcon 
+                        <SocialIcon
                                 type={ SocialIconType.Github }
                             />
                         </div>
