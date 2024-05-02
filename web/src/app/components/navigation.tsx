@@ -14,7 +14,7 @@ export default function Navigation() {
 
     return (
             <nav className="navigation fixed w-100 z-20 top-0 start-0">
-                <div className="navigation-wrapper align-items-center justify-content-between ml-auto mr-auto p-1">
+                <div className="navigation-wrapper h-full align-items-center justify-content-between ml-auto mr-auto p-1">
                     <span onClick={() => window.open("/", "_self")} className="align-self-center fs-1_5 fw-semibold whitespace-nowrap cursor-pointer">Ben Hilger</span>
                     <div id="navbar-sticky">
                         <ul className="w-100 p-0_25 fw-medium rounded">
