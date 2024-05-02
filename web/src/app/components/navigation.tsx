@@ -19,9 +19,6 @@ export default function Navigation() {
                     <div id="navbar-sticky">
                         <ul className="w-100 p-0_25 fw-medium rounded">
                             <li>
-                                <LinkItem href="/" isSelected={isSelected("/")} label="Home"/>
-                            </li>
-                            <li>
                                 <LinkItem href="/portfolio" isSelected={isSelected("/portfolio")} label="Portfolio"/>
                             </li>
                             <li>
