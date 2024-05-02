@@ -8,8 +8,8 @@ import Navigation from './components/navigation'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-title: 'Ben Hilger',
-       description: 'Portfolio Website',
+    title: 'Ben Hilger',
+    description: 'Portfolio Website',
 }
 
 export default function RootLayout({

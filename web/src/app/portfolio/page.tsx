@@ -14,25 +14,45 @@ export default function Portfolio() {
         new CardInfo(7, "GitHub", "There's a bunch of more small projects I've completed and have hosted on my Github Page. Feel free to take a look!", "https://github.com/Ben-Hilger/"),
    ];
 
-    function getPortfolioItems() {
-
-        return items.map((item: CardInfo) => {
-            return (
-                <Card
-                    key={item.id}
-                    title={item.title}
-                    description={item.description}
-                    link={item.link}
-                    target={item.target}
-                />
-            );
-        });
-    }
+    const cards: CardInfo[] = [
+        new CardInfo(1, "Railway.app", "ben-hilger.com is hosted using Railway.app, and is deployed using GitHub actions", null),
+        new CardInfo(2, "DNS", "ben-hilger.com is registered using SquareSpace domains. Along with that, ben-hilger.com uses SquareSpace namespace servers and services to add more DNS routes", null),
+        new CardInfo(4, "NEXT.js", "This website is built using NEXT.js, which uses React server-side components and typescript", null),
+    ];
 
     return (
-        <main className="portfolio-list h-100 p-2 background-inherit">
-
-            { getPortfolioItems() }
-        </main>
+        <>
+            <main className="portfolio-list h-100 p-2 background-inherit">
+                {
+                    items.map((item: CardInfo) => {
+                        return (
+                            <Card
+                                key={item.id}
+                                title={item.title}
+                                description={item.description}
+                                link={item.link}
+                                target={item.target}
+                            />
+                        );
+                    })
+                }
+            </main>
+            <div className="flex flex-col align-items-center p-2">
+                <h1 className="font-bold text-2xl">What&apos;s running ben-hilger.com?</h1>
+                <div className="card-list">
+                    {
+                        cards.map((card) => {
+                            return (
+                                <Card
+                                    title={card.title}
+                                    description={card.description}
+                                    key={card.id}
+                                />
+                            );
+                        })
+                    }
+                </div>
+            </div>
+        </>
     );
 }
