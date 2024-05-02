@@ -25,15 +25,8 @@ export default function Navigation() {
                                 <LinkItem href="/portfolio" isSelected={isSelected("/portfolio")} label="Portfolio"/>
                             </li>
                             <li>
-                                <LinkItem href="/about" isSelected={isSelected("/about")} label="About"/>
-                            </li>
-                            <li>
                                 <LinkItem href="/books" isSelected={isSelected("/books")} label="Books"/>
                             </li>
-                            {/*<li>*/}
-                            {/*    <LinkItem target="_blank" href="https://dev.to/benhilger" isSelected={false}*/}
-                            {/*              label="Blog"/>*/}
-                            {/*</li>*/}
                         </ul>
                     </div>
                     <div className="flex mr-1">
