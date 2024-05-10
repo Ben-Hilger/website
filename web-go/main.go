@@ -9,6 +9,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -27,7 +28,12 @@ func main() {
 	echoServer.Static("/assets", "assets")
 	echoServer.File("/favicon.ico", "assets/favicon.ico")
 
-	echoServer.Logger.Fatal(echoServer.Start(":8080"))
+	host := os.Getenv("HOST")
+	if host == "" {
+		host = ":8080"
+	}
+
+	echoServer.Logger.Fatal(echoServer.Start(host))
 }
 
 func handleIndexRoute(context echo.Context) error {
