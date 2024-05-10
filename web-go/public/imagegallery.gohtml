@@ -1,0 +1,13 @@
+{{ define "image-gallery" }}
+<div class="flex flex-row">
+   <div class="image-gallery flex flex-row overflow-x-auto">
+       {{ range $image := .images }}
+           <img class="scroll-image ml-1 mr-1"
+                src="{{ $image.Src }}"
+                alt="{{ $image.Alt }}"
+                width="150px"
+                height="225px">
+       {{ end }}
+   </div>
+</div>
+{{ end }}

@@ -1,0 +1,6 @@
+{{ define "card" }}
+    <a href="{{.Link}}" target="_blank" class="border-01 border-rounded p-1 m-1 cursor-pointer hover:shadow-xl">
+        <b class="text-lg">{{ .Title }}</b>
+        <p>{{ .Description }}</p>
+    </a>
+{{ end }}

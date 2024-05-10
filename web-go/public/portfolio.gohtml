@@ -1,0 +1,9 @@
+{{define "portfolio"}}
+    <div class="wrapper">
+        <main class="portfolio-list h-100 p-2 background-inherit">
+            {{ range $item := .PortfolioItems}}
+                {{ template "card" $item}}
+            {{ end }}
+        </main>
+    </div>
+{{end}}
