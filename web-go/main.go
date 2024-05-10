@@ -3,13 +3,13 @@ package main
 import (
 	"fmt"
 	"github.com/Ben-Hilger/website/book"
+	"github.com/Ben-Hilger/website/env"
 	"github.com/Ben-Hilger/website/portfolio"
 	"github.com/Ben-Hilger/website/template"
 	"github.com/Ben-Hilger/website/types"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"net/http"
-	"os"
 )
 
 func main() {
@@ -28,12 +28,13 @@ func main() {
 	echoServer.Static("/assets", "assets")
 	echoServer.File("/favicon.ico", "assets/favicon.ico")
 
-	host := os.Getenv("HOST")
-	if host == "" {
-		host = ":8080"
-	}
+	echoServer.Logger.Fatal(echoServer.Start(getServerAddress()))
+}
 
-	echoServer.Logger.Fatal(echoServer.Start(host))
+func getServerAddress() string {
+	host := env.GetEnvOrDefault("HOST", "127.0.0.1")
+	port := env.GetEnvOrDefault("PORT", "8080")
+	return fmt.Sprintf("%s:%s", host, port)
 }
 
 func handleIndexRoute(context echo.Context) error {
