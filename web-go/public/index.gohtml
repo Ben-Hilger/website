@@ -16,6 +16,9 @@
         {{ else if eq "/books" .Route }}
            {{ template "books" }}
         {{ end }}
+        {{ if eq "/blog" .Route }}
+            {{ template "blog" }}
+        {{ end }}
     </div>
 </body>
 </html>
